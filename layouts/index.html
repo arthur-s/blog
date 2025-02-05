@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Site.Title }}</h1>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p>{{ .Site.Params.about | markdownify }}</p>
+  </section>
+
+  <section id="articles">
+    <h2>Статьи</h2>
+    <ul>
+      {{ range where .Site.RegularPages "Section" "articles" }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+        </a>
+        {{ with .Resources.GetMatch .Params.image }}
+          {{ $resized := .Resize "300x200" }}
+          <img src="{{ $resized.RelPermalink }}" alt="{{ $.Title }}" width="300" height="200">
+        {{ end }}
+        <p>{{ .Summary }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

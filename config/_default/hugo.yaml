@@ -1,0 +1,47 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "My Personal Blog"
+theme: ""  # Leave empty if using custom layouts
+paginate: 10
+
+# Enable "summary" auto-generation
+summaryLength: 70
+
+# Enable minification for better performance
+minify:
+  disableXML: true
+
+# Site parameters (used in templates)
+params:
+  about: "Welcome to my personal blog, where I share my thoughts on technology and programming."
+  author: "Arthur"
+
+# Define output formats
+outputs:
+  home: ["HTML", "RSS"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
+
+# Asset processing for CSS and JS (optional)
+assetDir: "assets"
+
+# Menu (if needed)
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Articles"
+      url: "/articles/"
+      weight: 2
+
+# Enable Markdown render hooks (for images, links, etc.)
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow raw HTML in Markdown
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
