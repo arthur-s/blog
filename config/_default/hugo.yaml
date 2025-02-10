@@ -2,7 +2,8 @@ baseURL: "http://localhost:1313/"
 languageCode: "en-us"
 title: "My Personal Blog"
 theme: ""  # Leave empty if using custom layouts
-paginate: 10
+pagination:
+  pagerSize: 10
 
 # Enable "summary" auto-generation
 summaryLength: 70
