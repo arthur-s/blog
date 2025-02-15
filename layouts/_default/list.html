@@ -1,13 +1,14 @@
 {{ define "main" }}
-<a href="{{ .RelPermalink }}">
-  <h1>{{ .Title }}</h1>
-</a>
+  {{ $articles := .Pages.GroupByDate "2025" }}
+  {{ range $articles }}
+  <h2><a href="{{ site.BaseURL }}articles/{{ .Key }}/">{{ .Key }}</a></h2>
   <ul>
     {{ range .Pages }}
     <li>
-        <h3>{{ .Title }}</h3>
-        <p>{{ .Summary }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ .Date.Format "Jan 02, 2006" }})</h3>
+      <p>{{ .Summary }}</p>
     </li>
     {{ end }}
   </ul>
+  {{ end }}
 {{ end }}

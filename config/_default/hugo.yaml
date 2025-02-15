@@ -1,6 +1,6 @@
 baseURL: "http://localhost:1313/"
-languageCode: "en-us"
-title: "My Personal Blog"
+languageCode: "ru"
+title: "Go, Artur, Go!"
 theme: ""  # Leave empty if using custom layouts
 pagination:
   pagerSize: 10
@@ -14,8 +14,11 @@ minify:
 
 # Site parameters (used in templates)
 params:
-  about: "Welcome to my personal blog, where I share my thoughts on technology and programming."
-  author: "Arthur"
+  about: "Привет! Меня зовут Артур, я программирую на языках Go, Python. Создаю приложения и делюсь своим опытом в программировании."
+  author: "Артур"
+
+permalinks:
+  articles: "/articles/:year/:slug/"
 
 # Define output formats
 outputs:
