@@ -1,6 +1,7 @@
 ---
 title: "Создание веб-сайта для личного блога с помощью ChatGPT"
-date: "2025-02-14"
+slug: how-to-create-personal-glog-using-chatgpt
+date: 2025-02-14
 summary: "Как я создавал этот сайт с помощью нейросети ChatGPT."
 image: "chatgpt.jpeg"
 ---
